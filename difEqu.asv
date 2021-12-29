@@ -49,15 +49,16 @@ else
        [V,D] = eig(A);
        real_eig = real(e1);
        img_eig = imag(e1);
+       disp(real_eig);
+       disp(img_eig);
        V1=[V(1,1) ; V(2,1)];
        disp("vector: " );
        disp(V1);
        Vreal1=real(V1(1));
        Vreal2=real(V1(2));
-       Vimg1 = imag(V1(1)) ;
-       Vimg2 = imag(V1(2)) ;
-       fprintf(" Solution is : \n" );
-  fprintf('X1(t) = e^%.ft(cos%.ft[%f , %f]-sin%.ft[%f , %f])\n',real_eig,img_eig,Vreal1,Vreal2,img_eig,Vimg1,Vimg2);
-  fprintf('X2(t) = e^%.ft(cos%.ft[%f , %f]+sin%.ft[%f , %f])\n',real_eig,img_eig,Vimg1,Vimg2,img_eig,Vreal1,Vreal2);    
+              %Vimag = [imag(V1(1)) ;  imag(V1(2))];
+       %fprintf(" Solution is : \n" );
+  %fprintf('X1(t) = e^%.ft(cos%.ft[%f , %f]-sin%.ft[%f , %f])',real,img,Vreal[1,1],Vreal[2,1],img,Vimag[1,1],Vimag[2,1]);
+       
 end
     
